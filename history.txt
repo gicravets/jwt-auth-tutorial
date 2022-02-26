@@ -1,0 +1,477 @@
+apt install mc ssh sudo -y
+mcedit /etc/ssh/sshd_config
+mcedit /etc/ssh/sshd_config
+reboot
+ls -l
+mcedit cmd-pyenv-installer.sh 
+chmod +x cmd-pyenv-installer.sh 
+./cmd-pyenv-installer.sh 
+mcedit cmd-pyenv-installer.sh 
+./cmd-pyenv-installer.sh 
+mcedit cmd-pyenv-installer.sh 
+mcedit cmd-pyenv-installer.sh 
+./cmd-pyenv-installer.sh 
+mcedit cmd-pyenv-installer.sh 
+mcedit cmd-pyenv-installer.sh 
+./cmd-pyenv-installer.sh 
+mcedit cmd-pyenv-installer.sh 
+cat .profile 
+mcedit cmd-pyenv-installer.sh 
+./cmd-pyenv-installer.sh 
+cat .profile 
+./cmd-pyenv-installer.sh 
+cat .profile 
+reboot
+pyenv -v
+python -V
+python3 -V
+pyenv local 3.7.6
+pyenv install  3.7.6
+pyenv local 3.7.6
+python3 -V
+python -V
+cd /opt/
+git clone https://github.com/gicravets/flask-api-tutorial.git
+cd flask-api-tutorial/
+ls -l 
+mcedit .env
+python -m venv venv --prompt flask-api-tutorial
+python -V 
+pyenv local 3.7.6
+python -V 
+pip -V 
+python -m venv venv --prompt flask-api-tutorial
+source venv/bin/activate
+pip install --upgrade pip setuptools wheel
+mcedit .env
+python
+mcedit .env
+pip install -e .[dev]
+tox
+tox
+flask
+export FLASK_APP=export FLASK_ENV=development
+export FLASK_APP=run.py 
+FLASK_ENV=development
+flask
+python
+pip install -e .[dev]
+deactivate
+rm -fr .tox
+rm -fr venv
+python -m venv venv --prompt flask-api-tutorial
+source venv/bin/activate
+pip install -e .[dev]
+pip install --upgrade pip
+export FLASK_APP=run.py 
+python
+pip install -e .[dev]
+pip install -e .[dev]
+python
+export FLASK_ENV=development
+python
+flask shell
+tox
+flask db init
+rm -fr migrations
+flask db init
+flask db migrate --message "add User model"
+flask db upgrade
+flask shell
+tox
+ 'str' object has no attribute 'decode'
+FAILED tests/test_update_widget.py::test_update_widget - AttributeError
+flask shell
+flask routes
+flask run --host=0.0.0.0
+apt update
+apt install samba
+systemctl enable smbd
+nftables 
+apt-get install nftables
+cat /etc/nftables.conf
+systemctl enable nftables
+systemctl start nftables
+systemctl status nftables
+ nft list ruleset
+cd /etc/sysconfig
+cat /etc/nftables.conf 
+mkdir /root/nftables
+iptables-restore-translate -f  /root/nftables/iptables 
+iptables-translate -f  /root/nftables/iptables 
+iptables-restore-translate -f /root/nftables/iptables > /root/nftables/nft_ruleset.nft
+apt-get install nftables iptables-translate
+apt-get install nftables-translate
+apt-get install xtables-translate
+apt-get install  nftables
+history
+history -w /root/history_1.txt
+  cd /opt/flask-api-tutorial/
+source venv/bin/activate
+flask run --host=0.0.0.0
+cd nftables/
+iptables-restore-translate -f iptables 
+sudo apt-get install nftables
+apt install iptables-nftables-compat
+history
+nft -f ip6tables.nft 
+nft list ruleset
+ nft -f iptables.nft
+nft list ruleset
+nft list ruleset
+nft list ruleset
+iptables-translate
+history -w /root/history_2.txt
+cd /opt/flask-api-tutorial/
+source venv/bin/activate
+flask run --host=0.0.0.0
+flask run --host=0.0.0.0
+sudo netstat -tulpn
+sudo ss -tulpn
+apt install nginx -y
+nginx -t
+systemctl restart nginx
+cd /opt/flask-api-tutorial/
+source venv/bin/activate
+flask run --host=0.0.0.0
+sudo ss -tulpn
+sudo ss -tulpn
+sudo ss –pnltu
+ss –lntup
+reboot
+ss –lntup
+cd /opt/flask-api-tutorial/
+source venv/bin/activate
+flask run --host=0.0.0.0
+systemctl restart nginx.service 
+flask run --host=0.0.0.0
+cp /etc/samba/smb.conf smb.conf.orig
+ls l /etc/samba/
+ls -l /etc/samba/
+cp /etc/samba/smb.conf /etc/samba/smb.conf.orig
+ls -l /etc/samba/
+mkdir /opt/Project
+systemctl restart smbd.service 
+useradd ProjectUser01
+chown ProjectUser01:ProjectUser01 /opt/Project
+systemctl restart smbd
+passwd ProjectUser01
+ip a
+smbpasswd -a ProjectUser01
+history -w /root/history_3.txt
+cat /root/history_3.txt
+cat /root/history_3.txt | grep samba
+adduser
+deluser --remove-home  ProjectUser01
+cat /etc/passwd
+cat /etc/passwd |grep Pr
+cat /etc/passwd |grep ProjectUser01
+ls -l 
+chmod +x cmd-samba.sh
+./cmd-samba.sh 
+mcedit cmd-samba.sh 
+cat /etc/passwd |grep ProjectUser01
+./cmd-samba.sh 
+cat /etc/passwd |grep ProjectUser01
+systemctl restart smbd
+ln -s  /opt/flask-api-tutorial /opt/Project/
+ls -l /opt/Project/
+ls -l /opt/Project/
+ls -l /opt/
+cat cmd-samba.sh 
+USER="ProjectUser01"
+USERDIR="/opt/Project"
+chown ${USER}:${USER} ${USERDIR}
+chown ${USER}:${USER} /opt/*
+chown -R ${USER}:${USER} /opt/
+systemctl restart smbd
+cat > /etc/samba/smb.conf << EOF
+#======================= Global Settings =======================
+[global]
+  workgroup = WORKGROUP
+  server role = standalone server
+  server string = Samba Server %v
+  netbios name = rhel8
+  security = user
+  map to guest = bad user
+  dns proxy = no
+  
+  allow insecure wide links = yes
+#======================= Share Definitions =======================
+[Project-share]
+  comment = unixcop share
+  path = /opt/Project
+  read-only = no
+  browsable = yes
+  writeable=yes
+  
+  follow symlinks = yes
+  wide links = yes
+EOF
+testparm
+systemctl restart smbd
+chown -R ${USER}:project_securedgroup ${USERDIR}
+chown -R ${USER}:project_securedgroup /opt/
+chown -R ${USER}:project_securedgroup /opt/*
+cat > /etc/samba/smb.conf << EOF
+#======================= Global Settings =======================
+[global]
+  workgroup = WORKGROUP
+  server role = standalone server
+  server string = Samba Server %v
+  netbios name = rhel8
+  security = user
+  map to guest = bad user
+  dns proxy = no
+  
+  allow insecure wide links = yes
+#======================= Share Definitions =======================
+[Project-share]
+  comment = unixcop share
+  path = /opt/Project
+  read-only = no
+  browsable = yes
+  writeable=yes
+  
+  follow symlinks = yes
+  wide links = yes
+  
+  force group = project_securedgroup
+  
+EOF
+testparm
+sudo systemctl restart {smb,nmb}
+systemctl restart smbd
+systemctl restart smbd
+sudo systemctl restart {smbd,smb,nmb}
+chown -R ProjectUser01:project_securedgroup /opt/Project/
+ls -l /opt/Project/
+ls -l /opt/flask-api-tutorial/
+nft list ruleset
+nft -f /root/nftables/iptables.nft
+nft -f /root/nftables/ip6tables.nft
+nft list ruleset
+sudo netstat -tulpn
+sudo ss -tulpn
+sudo ss -tulpn
+nft -f /root/nftables/ip6tables.nft
+nft -f /root/nftables/iptables.nft
+nft list ruleset
+cp /etc/nftables.conf /etc/nftables.conf.back && nft list ruleset >> /etc/nftables.conf
+cat /etc/nftables.conf.back 
+cat /etc/nftables.conf
+reboot
+cd /usr/src
+dpkg -i ./veeam-release-deb_
+dpkg -i ./veeam-release-deb_1.0.8_amd64.deb 
+apt-get update
+apt-get install veeam -y
+apt-get install cifs-utils nfs-common genisoimage squashfs-tools
+veeam
+sudo apt update
+sudo apt upgrade
+reboot
+history
+chmod +x /opt/flask-api-tutorial/bootstrap.sh 
+/opt/flask-api-tutorial/bootstrap.sh
+/opt/flask-api-tutorial/bootstrap.sh
+/opt/flask-api-tutorial/bootstrap.sh
+/opt/flask-api-tutorial/bootstrap.sh
+veeam
+veeam
+history
+GROUP="project_securedgroup"
+USER="regatio"
+sudo useradd -M ${USER} -G ${GROUP}
+su - regatio
+useradd -m -d /home/${USER} ${USER}
+su - regatio
+history | grep del
+deluser --remove-home ${USER}
+useradd -m -d /home/${USER} ${USER} -G ${GROUP}
+su - regatio
+deluser --remove-home ${USER}
+useradd -m -d /home/${USER} ${USER} -G ${GROUP} -s /sbin/bash
+cat /etc/passwd | grep bash
+ls -l /home/regatio/
+ls -l /home/locadmin/
+su - regatio
+useradd -m -d /home/${USER} ${USER} -G ${GROUP} -s /bin/bash
+su - regatio
+deluser --remove-home ${USER}
+useradd -m -d /home/${USER} ${USER} -G ${GROUP} -s /bin/bash
+su - regatio
+/usr/sbin/usermod -aG sudo regatio
+su - regatio
+su - regatio
+apt install nohup -y
+dpkg -S /usr/bin/nohup
+nohup
+su - regatio
+sudo chown -R ${USER}:${GROUP} /opt/flask-api-tutorial
+su - regatio
+su - regatio
+history -w /root/history_4.txt
+su - regatio
+cp /root/cmd-pyenv-installer.sh /home/regatio/
+chown -R ${USER}:${USER} /home/regatio/cmd-pyenv-installer.sh 
+echo ${USER}
+su - regatio
+cat /etc/sudoers
+mcedit /etc/sudoers
+echo ${USER}
+mcedit /etc/sudoers
+reboot
+su - regatio
+su - regatio
+ps ax | grep flask
+ps ax | grep flask
+reboot
+ps ax | grep flask
+su - regatio
+curl -X 'POST'   'http://109.95.214.27/api/v1/auth/register'   -H 'accept: application/json'   -H 'Content-Type: application/x-www-form-urlencoded'   -d 'email=gera%40gmail.com&password=321123!'
+curl -X 'POST'   'http://109.95.214.27/api/v1/auth/register'   -H 'accept: application/json'   -H 'Content-Type: application/x-www-form-urlencoded'   -d 'email=gera1%40gmail.com&password=12345678'
+curl -X 'POST'   'http://109.95.214.27/api/v1/auth/register'   -H 'accept: application/json'   -H 'Content-Type: application/x-www-form-urlencoded'   -d 'email=user%40mail.com&password=12345678'
+curl -X 'POST'   'http://109.95.214.27/api/v1/auth/register'   -H 'accept: application/json'   -H 'Content-Type: application/x-www-form-urlencoded'   -d 'email=user%40mail.com&password=12345678'
+USER="regatio"
+GROUP="project_securedgroup"
+sudo chown -R ${USER}:${GROUP} /opt/flask-api-tutorial
+sudo chown -R ${USER}:${GROUP} /opt/Project
+reboot
+history | grep ls
+history | grep ln
+ln -s  /opt/flask-api-02 /opt/Project/
+ss –lntup
+history | grep ch
+history | grep USER
+USER="regatio"
+history | grep GROUP
+GROUP="project_securedgroup"
+sudo chown -R ${USER}:${GROUP} /opt/*
+su - regatio
+su - regatio
+cd /opt/
+git clone https://github.com/miguelgrinberg/REST-auth.git
+ln -s /opt/REST-auth /opt/Project/flask-api-03
+cd /opt/Project/flask-api-03
+pyenv install  3.7.6
+pyenv local 3.7.6
+python3 -V
+python -V
+ pyenv   3.8.6
+pyenv local 3.8.6
+python -V
+pip -V
+virtualenv venv
+python -m venv venv
+source venv/bin/activate
+python -V 
+pip -V 
+pip install --upgrade pip setuptools wheel
+pip -V 
+pip install -r requirements.txt
+python api.py
+curl -i -X POST -H "Content-Type: application/json" -d '{"username":"miguel","password":"python"}' http://127.0.0.1:5000/api/users
+curl -u miguel:python -i -X GET http://127.0.0.1:5000/api/resource
+curl -u miguel:ruby -i -X GET http://127.0.0.1:5000/api/resource
+curl -u miguel:python -i -X GET http://127.0.0.1:5000/api/token
+curl -u eyJhbGciOiJIUzI1NiIsImV4cCI6MTM4NTY2OTY1NSwiaWF0IjoxMzg1NjY5MDU1fQ.eyJpZCI6MX0.XbOEFJkhjHJ5uRINh2JA1BPzXjSohKYDRT472wGOvjc:x -i -X GET http://127.0.0.1:5000/api/resource
+cd /opt/Project/flask-api-03
+source venv/bin/activate
+python api.py
+cd /opt/Project/flask-api-03
+source venv/bin/activate
+python api.py
+su - regatio
+pip -V 
+python -V 
+pyenv local 3.8.6
+su - regatio
+source venv/bin/activate
+python api.py
+sudo -u postgres psql -c "SELECT version();"
+cd /opt/
+git clone https://github.com/realpython/flask-jwt-auth.git
+cd flask-jwt-auth
+git checkout tags/1.0.0 -b jwt-auth
+# Начните с клонирования шаблона проекта, а затем создайте новую ветку:
+# Создайте и активируйте virtualenv и установите зависимости:
+pyenv local 3.6.6
+pyenv install 3.6.6
+pyenv local 3.6.6
+source venv/bin/activate
+python -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+history 
+pip install --upgrade pip setuptools wheel
+# Это необязательно, но рекомендуется создать новый репозиторий Github и обновить удаленный:
+git remote set-url origin https://github.com/gicravets/jwt-auth-tutorial
+echo "# jwt-auth-tutorial" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git config --global --edit
+git config --list --show-origin
+git config --global user.name "Cravets George"
+git config --global user.email gicravets@gmail.com
+git config --global user.name "Georgy Cravets"
+git config --global --edit
+# Выбор редактора
+git config --global core.editor mcedit
+git config --global --edit
+git config --list
+# Проверка настроек
+git branch -M main
+git remote add origin git@github.com:gicravets/jwt-auth-tutorial.git
+git remote add origin git@github.com:gicravets/jwt-auth-tutorial.git
+git config --show-origin rerere.autoUpdate
+cat /root/.gitconfig 
+psql
+sudo apt install postgresql postgresql-contrib
+sudo -u postgres psql -c "SELECT version();"
+sudo su - postgres -c "create database flask_jwt_auth;"
+sudo su - postgres -c "createdb flask_jwt_auth;"
+sudo su - postgres -c "createuser user_flask_jwt_auth;"
+sudo su - postgres -c "createdb flask_jwt_auth_test;"
+ls -l 
+mcedit project/server/config.py
+export APP_SETTINGS="project.server.config.DevelopmentConfig"
+cat  project/tests/test__config.py
+export APP_SETTINGS="project.server.config.DevelopmentConfig"
+python manage.py test
+cat project/server/models.py
+mcedit project/server/models.py
+mcedit project/server/models.py
+pip install psycopg2==2.6.2
+pip install psycopg2
+pip install psycopg
+pip install psycopg2
+cat manage.py 
+mcedit manage.py 
+python manage.py create_db
+mcedit manage.py 
+sudo apt install libpq-dev python3-dev
+sudo apt-get install libpq-dev python3-dev
+pip install psycopg2==2.6.2
+pip install psycopg2==2.7.2
+python manage.py create_db
+pip install psycopg2==2.6.2
+pip install psycopg2==2.7.5
+python manage.py create_db
+pip freeze > requirements.txt
+psql
+history | grep di
+history | grep de
+deactivate
+echo "# jwt-auth-tutorial" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin git@github.com:gicravets/jwt-auth-tutorial.git
+git push -u origin main
+ssh -vT git@github.com
+ssh -T gicravets@github.com
+eval "$(ssh-agent -s)"
+history -w /opt/flask-jwt-auth/history.txt
