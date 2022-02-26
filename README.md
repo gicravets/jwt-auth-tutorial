@@ -16,6 +16,38 @@ Check out the [blog post](https://realpython.com/blog/python/token-based-authent
 
 ### Set Environment Variables
 
+user_flask_jwt_auth
+flask_jwt_auth
+lask_jwt_auth_test
+
+```sh
+sudo apt install postgresql postgresql-contrib -y
+ss -nlt | grep 5432
+sudo -u postgres psql -c "SELECT version();"
+```
+
+```sh
+sudo su - postgres -c "createuser user_flask_jwt_auth;"
+sudo su - postgres -c "alter user user_flask_jwt_auth with encrypted password '<password>';"
+sudo su - postgres -c "createdb flask_jwt_auth;"
+sudo su - postgres -c "createdb flask_jwt_auth_test;"
+sudo su - postgres -c "grant all privileges on database flask_jwt_auth to user_flask_jwt_auth;"
+sudo su - postgres -c "grant all privileges on database flask_jwt_auth_test to user_flask_jwt_auth;"
+```
+
+```sh
+sudo su - postgres -c "create database <dbname>;"
+sudo su - postgres -c "create user <username> with encrypted password '<password>';"
+sudo su - postgres -c "grant all privileges on database <dbname> to <username>;"
+```
+
+```sh
+pip install pyjwt==1.4.2
+pip install psycopg2==2.9.3  
+pip install psycopg2-binary==2.9.3
+pip install --upgrade sqlalchemy
+```
+
 Update *project/server/config.py*, and then run:
 
 ```sh
